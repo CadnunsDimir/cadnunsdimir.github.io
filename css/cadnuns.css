@@ -118,6 +118,7 @@ nav#menu li.page{
 div#conteudo{
     min-height: 100%;
     position: relative;
+    height:100%;
 }
 
 .sombra1{
