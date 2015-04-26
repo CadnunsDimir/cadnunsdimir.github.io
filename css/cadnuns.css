@@ -87,7 +87,7 @@ form#admin{
 
 nav#menu ul{
     position: fixed;
-    right: 5px;  
+    right: -5px;  
     top: 50px
 }
 
