@@ -18,14 +18,18 @@ and open the template in the editor.
 
 
 @media screen and (min-width: 401px) and (max-width: 599px){
-	body{
+	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
+		width:100%;
+		padding:10px;
 	}
 }
 
 @media screen and (min-width: 600px){
-	body{
+	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
+		width:100%;
+		padding:10px;
 	}
 }
 
