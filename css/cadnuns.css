@@ -12,20 +12,20 @@ and open the template in the editor.
 
 @media screen and (max-width: 400px){
 	body{
-		background-color:red;
+	/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 	}
 }
 
 
 @media screen and (min-width: 401px) and (max-width: 599px){
 	body{
-		background-color:green;
+		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 	}
 }
 
 @media screen and (min-width: 600px){
 	body{
-		background-color:blue;
+		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 	}
 }
 
