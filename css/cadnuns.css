@@ -16,6 +16,11 @@ and open the template in the editor.
 		width:100%;
 		
 	}
+	
+	form#admin{
+		
+		display:none;
+	}
 }
 
 
@@ -24,6 +29,12 @@ and open the template in the editor.
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 		width:100%;
 		
+	}
+	
+	
+	form#admin{
+		
+		display:none;
 	}
 }
 
