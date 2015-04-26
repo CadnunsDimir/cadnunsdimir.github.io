@@ -11,8 +11,10 @@ and open the template in the editor.
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 @media screen and (max-width: 400px){
-	body{
-	/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
+	.container{
+		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
+		width:100%;
+		padding:10px;
 	}
 }
 
@@ -26,11 +28,7 @@ and open the template in the editor.
 }
 
 @media screen and (min-width: 600px){
-	.container{
-		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
-		width:100%;
-		padding:10px;
-	}
+	
 }
 
 
