@@ -10,6 +10,24 @@ and open the template in the editor.
 @import url(http://fonts.googleapis.com/css?family=Slabo+27px);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
+@media screen and (max-width: 400px){
+	body{
+		background-color:red;
+	}
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 599px){
+	body{
+		background-color:green;
+	}
+}
+
+@media screen and (min-width: 600px){
+	body{
+		background-color:blue;
+	}
+}
 
 
 *{
