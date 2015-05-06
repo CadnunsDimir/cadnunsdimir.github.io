@@ -252,10 +252,15 @@ footer#rodape{
                             background-color:white;
                             opacity:0.9;
                             border-radius:7px;
+                            border: 2px solid green;
                             min-height:80px;
                             max-width:50%;
                             left:40px;
                             top:10px;
                             padding-left:10px;
                             padding-bottom:10px;
+}
+#raspberry >img {
+	width:100%;	
+}
 }
