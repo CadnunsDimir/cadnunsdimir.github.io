@@ -247,7 +247,7 @@ footer#rodape{
                                     float:left;
 }
 
-#raspberry > .fb-like{
+#raspberry .fb-like{
 	position:absolute;
                             background-color:white;
                             opacity:0.9;
@@ -260,6 +260,6 @@ footer#rodape{
                             padding-left:10px;
                             padding-bottom:10px;
 }
-#raspberry > img {
+#raspberry img {
 	width:100%;
 }
