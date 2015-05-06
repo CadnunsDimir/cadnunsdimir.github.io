@@ -21,6 +21,10 @@ and open the template in the editor.
 		
 		display:none;
 	}
+	
+	img{
+		width:300;
+	}
 }
 
 
@@ -36,10 +40,16 @@ and open the template in the editor.
 		
 		display:none;
 	}
+	
+	img{
+		width:500;
+	}
 }
 
 @media screen and (min-width: 600px){
-	
+	img{
+		width:700;
+	}
 }
 
 
@@ -185,7 +195,7 @@ section.index h1{
 section.index img{
     border: 7px solid white;
     box-shadow: 2px 2px 4px #009900;
-    max-width:320px;
+    
 	
 }
 section.index p{
