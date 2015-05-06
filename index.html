@@ -13,51 +13,23 @@ and open the template in the editor.
     </head>
     <body>
         <!--Facebook script -->
-        <h1 id="fb-welcome"></h1>
-        <div id="fb-root"></div>
         <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '1468414420117318',
-              xfbml      : true,
-              version    : 'v2.3'
-            });
-        
-            // ADD ADDITIONAL FACEBOOK CODE HERE
-             (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-           
-           function onLogin(response) {
-  if (response.status == 'connected') {
-    FB.api('/me?fields=first_name', function(data) {
-      var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1468414420117318',
+      xfbml      : true,
+      version    : 'v2.3'
     });
-  }
-}
+  };
 
-FB.getLoginStatus(function(response) {
-  // Check login status on load, and if the user is
-  // already logged in, go directly to the welcome message.
-  if (response.status == 'connected') {
-    onLogin(response);
-  } else {
-    // Otherwise, show Login dialog first.
-    FB.login(function(response) {
-      onLogin(response);
-    }, {scope: 'user_friends, email'});
-  }
-});
-          };
-        
-         
-           
-        </script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
         <div id="interface">
             <header id="cabecalho">
                 <h1 class="titulo container">Cadnuns Dimir</h1><h4 class="titulo container">A Revolução</h4>
@@ -88,6 +60,11 @@ FB.getLoginStatus(function(response) {
                             <h4>Por Cadnuns Dimir</h4>
                         </hgroup>
                         <img src="img/rpi.jpeg">
+                        <div class="fb-like"
+                          data-share="true"
+                          data-width="450"
+                          data-show-faces="true">
+                        </div>
                         <p>Bem, de alguns anos para cá, vimos inovações tecnologicas cada vez mais presentes em nossas vida. Celulares se tornaram verdadeiros computadores, O surgimento e a popularização dos Mini-PCs, Carros Inteligentes, óculos futuristas que nos ajudam em nossas atividades.</p>
                         <p>Esses foram alguns dos motivos que levaram a criação dessa Iniciativa Pessoal, Sob o pseudo-nomio <b>Cadnuns Dimir</b>, na busca pela pesquisa e desenvolvimento de Produtos e serviços voltados a essas tecnologias.</p>
                         
