@@ -185,7 +185,7 @@ section.index h1{
 section.index img{
     border: 7px solid white;
     box-shadow: 2px 2px 4px #009900;
-    width:50%;
+    max-width:320px;
 	
 }
 section.index p{
@@ -239,4 +239,23 @@ footer#rodape{
    height: 100px;
    background-color: #009933;
    color: #66ff66;
+}
+
+#raspberry{
+	position:relative;
+                           max-width:500px;
+                                    float:left;
+}
+
+#raspberry > fb-like{
+	position:absolute;
+                            background-color:white;
+                            opacity:0.9;
+                            border-radius:7px;
+                            min-height:80px;
+                            max-width:50%;
+                            left:40px;
+                            top:10px;
+                            padding-left:10px;
+                            padding-bottom:10px;
 }
