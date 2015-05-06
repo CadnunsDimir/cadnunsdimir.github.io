@@ -50,6 +50,11 @@ and open the template in the editor.
 	img{
 		width:700;
 	}
+	
+	#raspberry{
+		margin: 10px;
+		
+	}
 }
 
 
