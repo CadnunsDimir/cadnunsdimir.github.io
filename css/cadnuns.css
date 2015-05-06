@@ -247,7 +247,7 @@ footer#rodape{
                                     float:left;
 }
 
-#raspberry > fb-like{
+#raspberry > .fb-like{
 	position:absolute;
                             background-color:white;
                             opacity:0.9;
