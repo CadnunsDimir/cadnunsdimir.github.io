@@ -95,6 +95,10 @@ and open the template in the editor.
 		width:700px;
 	}
 	
+	.card{
+		width: 355px;
+	}
+	
 	section p{
 		margin: 30px;
 		
@@ -277,8 +281,8 @@ section.index p{
     margin: 7px;
     border-radius: 7px;
     padding: 10px;
-    //width: 28.5%;
-    width: 355px;
+    
+    
     height: 380px;
     display: inline-table;
 }
