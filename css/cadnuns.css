@@ -231,6 +231,8 @@ div#conteudo{
     margin-left: auto;
     margin-right: auto;
     /*width: 90%;*/ 
+}
+header#cabecalho .container{
     min-height:100%;
     position:relative;
 }
