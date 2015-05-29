@@ -14,7 +14,7 @@ and open the template in the editor.
 	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 		width:100%;
-		
+
 	}
 	
 	form#admin{
@@ -23,8 +23,29 @@ and open the template in the editor.
 	}
 	
 	img{
-		width:300;
+		width:300px;
 	}
+
+    nav#menu ul {
+        display: none;
+    }
+    nav#menu .btn {
+        position: fixed;
+        right: -10px;  
+        top: 50px
+    }
+    
+    nav#menu:hover .btn {
+        display:none;
+    } 
+    nav#menu:hover ul {
+        display:block;
+    } 
+
+    #cabecalho {
+        text-align:center;
+    }
+
 }
 
 
@@ -32,9 +53,12 @@ and open the template in the editor.
 	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 		width:100%;
-		
 	}
-	
+    section.index {
+        padding:5px;
+        margin-left:-15px;        
+        margin-right:20px;
+    }
 	
 	form#admin{
 		
@@ -42,27 +66,51 @@ and open the template in the editor.
 	}
 	
 	img{
-		width:500;
+		width:500px;
 	}
+
+    nav#menu ul {
+        display: none;
+    }
+    nav#menu .btn {
+        position: fixed;
+        right: -10px;  
+        top: 60px
+    }
+    #cabecalho {
+        text-align:center;
+    }
+
+    nav#menu:hover .btn {
+        display:none;
+    } 
+    nav#menu:hover ul {
+        display:block;
+    } 
 }
 
 @media screen and (min-width: 600px){
 	img{
-		width:700;
+		width:700px;
 	}
 	
 	p{
-		margin: 30;
+		margin: 30px;
 		
 	}
+
+    nav#menu .btn {
+        display:none;
+    }
+
 }
 
 
 *{
     margin: 0px;
     font-family: 'Ubuntu', serif;
-    //font-family: 'Slabo 27px', serif;
-    //font-family: sans-serif;    
+    /*font-family: 'Slabo 27px', serif;
+    font-family: sans-serif;    */
 }
 
 body{
@@ -118,12 +166,12 @@ form#admin{
 
 nav#menu ul{
     position: fixed;
-    right: 50px;  
+    right: -10px;  
     top: 50px
 }
 
-nav#menu li{ 
-    display: block;
+nav#menu li,nav#menu .btn { 
+    list-style:none;
     padding: 5px;
     background-color: #009900;
     margin: 10px;
@@ -231,6 +279,7 @@ section.index p{
 .card img{
     width: 100%;
 }
+
 iframe#frame{
     width: 100%;
     height: 500px;
@@ -249,19 +298,17 @@ footer#rodape{
 }
 
 
-
 .fundo2{
    height: 100px;
    background-color: #009933;
    color: #66ff66;
 }
-
+/*Facebook plugins css*/
 #raspberry{
 	position:relative;
                            max-width:500px;
                                     float:left;
 }
-
 #raspberry .fb-like{
 	position:absolute;
                             background-color:white;
