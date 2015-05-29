@@ -295,6 +295,9 @@ iframe#contato{
 	min-height:100%;
 	position:relative;
 }
+div#interface > #conteudo{
+	padding-bottom: 100px;
+}
 footer#rodape{
     clear: both;
     position : absolute;
