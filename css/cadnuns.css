@@ -236,6 +236,7 @@ div#conteudo{
 section.index{
     padding: 20px 20px 20px 50px;
     min-height: 100%;
+    position:relative;
 }
 
 section.index *{
