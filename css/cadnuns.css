@@ -274,7 +274,7 @@ section.index p{
 .cards-place{
 	padding:auto;
  padding-left:4px;
-    
+  margin: 0 auto;  
 }
 
 .card{
