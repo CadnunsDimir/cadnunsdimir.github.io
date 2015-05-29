@@ -294,7 +294,6 @@ iframe#contato{
 #interface{
 	min-height:100%;
 	position:relative;
-	padding-bottom:100px;
 }
 footer#rodape{
     clear: both;
@@ -311,6 +310,7 @@ footer#rodape{
    height: 100px;
    background-color: #009933;
    color: #66ff66;
+   margin-top:100px;
 }
 /*Facebook plugins css*/
 #raspberry{
