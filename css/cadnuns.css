@@ -273,7 +273,7 @@ section.index p{
 }
 .cards-place{
   margin: 0 auto; 
-   align-items: center;
+   /*align-items: center;*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
