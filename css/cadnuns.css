@@ -16,6 +16,9 @@ and open the template in the editor.
 		width:100%;
 
 	}
+	.card{
+		width:100%;
+	}
 	
 	form#admin{
 		
@@ -49,6 +52,10 @@ and open the template in the editor.
 @media screen and (min-width: 401px) and (max-width: 620px){
 	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
+		width:100%;
+	}
+	
+	.card{
 		width:100%;
 	}
     section.index {
