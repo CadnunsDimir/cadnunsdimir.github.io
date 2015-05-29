@@ -240,7 +240,7 @@ section.index{
 
 section.index *{
     margin-top: 10px;
-    color: #66cc00;
+    color: #66cc00;f
     
 }
 
@@ -252,8 +252,6 @@ section.index h1{
 section.index img{
     border: 7px solid white;
     box-shadow: 2px 2px 4px #009900;
-    
-	
 }
 section.index p{
 
@@ -295,7 +293,7 @@ iframe#contato{
 #interface{
 	min-height:100%;
 	position:relative;
-	width:800px;
+	
 }
 footer#rodape{
     clear: both;
