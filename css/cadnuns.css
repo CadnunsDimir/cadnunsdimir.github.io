@@ -35,9 +35,6 @@ and open the template in the editor.
         top: 50px
     }
     
-    nav#menu:hover .btn {
-        display:none;
-    } 
     nav#menu:hover ul {
         display:block;
     } 
@@ -81,9 +78,6 @@ and open the template in the editor.
         text-align:center;
     }
 
-    nav#menu:hover .btn {
-        display:none;
-    } 
     nav#menu:hover ul {
         display:block;
     } 
@@ -94,7 +88,7 @@ and open the template in the editor.
 		width:700px;
 	}
 	
-	p{
+	section p{
 		margin: 30px;
 		
 	}
@@ -102,6 +96,10 @@ and open the template in the editor.
     nav#menu .btn {
         display:none;
     }
+    section.index p{
+   padding-right:30px;   
+   padding-left:50px;
+}
 
 }
 
@@ -115,7 +113,7 @@ and open the template in the editor.
 
 body{
 width:100%;	
-
+height :100%;
 }
 
 a{
@@ -164,11 +162,15 @@ form#admin{
     right: 10px;
 }
 
-nav#menu ul{
+nav#menu *{
     z-index:9;
+}
+
+nav#menu ul{
+    
     position: fixed;
     right: -10px;  
-    top: 50px
+    top: 100px
 }
 
 nav#menu li,nav#menu .btn { 
@@ -233,6 +235,7 @@ div#conteudo{
 
 section.index{
     padding: 20px 20px 20px 50px;
+    min-height: 500px;
 }
 
 section.index *{
@@ -253,7 +256,7 @@ section.index img{
 	
 }
 section.index p{
-	
+
 }
 .top-space{
     padding-top: 30px;
@@ -307,8 +310,10 @@ footer#rodape{
 /*Facebook plugins css*/
 #raspberry{
 	position:relative;
-                           max-width:500px;
-                                    float:left;
+    max-width:500px;
+    float:left;
+    margin-right: 50px;
+    margin-bottom: 20px;
 }
 #raspberry .fb-like{
 	position:absolute;
@@ -325,4 +330,6 @@ footer#rodape{
 }
 #raspberry img {
 	width:100%;
+}
+.pr {
 }
