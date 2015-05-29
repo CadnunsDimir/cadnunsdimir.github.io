@@ -272,7 +272,12 @@ section.index p{
     padding-top: 30px;
 }
 .cards-place{
-  margin: 0 auto;  
+  margin: 0 auto; 
+   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card{
