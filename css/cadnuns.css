@@ -49,7 +49,7 @@ and open the template in the editor.
 }
 
 
-@media screen and (min-width: 401px) and (max-width: 599px){
+@media screen and (min-width: 401px) and (max-width: 620px){
 	.container{
 		/*configurações de acordo com tamnaho da tela devem ser postas aqui*/
 		width:100%;
@@ -89,7 +89,7 @@ and open the template in the editor.
     } 
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 621px){
 	img{
 		width:700px;
 	}
@@ -165,6 +165,7 @@ form#admin{
 }
 
 nav#menu ul{
+    z-index:9;
     position: fixed;
     right: -10px;  
     top: 50px
