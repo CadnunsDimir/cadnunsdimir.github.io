@@ -110,8 +110,11 @@ and open the template in the editor.
     section.index p{
    padding-right:30px;   
    padding-left:50px;
-}
+   }
 
+     #conteudo{
+     	min-height:600px;
+     }
 }
 
 
