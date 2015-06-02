@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadnuns Tecnologias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="css/cadnuns.css" rel="stylesheet">
+		<script src="js/libs/jquery/jquery.js"></script>
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <h1 class="titulo container">Cadnuns Dimir</h1><h4 class="titulo container">A Revolução</h4>
+                <form method="post" id="admin" name='signup' action='login.php'>
+                    <input class="login loginInput" placeholder="Nome" name="login" type="text">
+                    <input class="login loginInput" placeholder="Senha" name="senha" type="password">
+                    <button class="login" type="submit" onclick="">Área Restrita</button>
+                </form>             
+                <nav id="menu">
+                    <div class="btn">
+                        Menu
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>Sobre Mim</li>
+                        <li><a href="projects.html">Projetos</a></li>
+                        <li>Parceiros</li>
+                        <li><a href="contact.html">Contato</a></li>
+                        <li class="page">Multimídia</li>
+                    </ul>                   
+                </nav>
+            </header>
+            <div id="conteudo">
+                <div class="container teste1">
+                    <section class="index">
+                        <hgroup>
+                            <h4>Site > Multimídia</h4>
+                            <h1>Sobre Mim</h1>
+							<a href="#certificados"><h4> Veja meus certificados</h4></a>
+                        </hgroup>
+                        <figure id="perfil_img">
+                            <img src="img/tiago_social.jpg" />
+                        </figure>
+                        <aside id="info_about_me">
+							<h2>Tiago Silva do Nascimento</h2>
+							<h3>(Cadnuns Dimir)</h3>
+						<p>
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							kvcskdjfhv khkhkjhkjhkjh kjhkhkhkhkjh kjhkhkjhkhkhk kjhkhkjhkh kjhkjhkjhkjh
+							</p>
+						</aside>
+                        <article id="certificados">
+							<h2>Meus Certificados e Diplomas</h2>
+							<ul class="certif-list">
+							<script>
+							$(document).ready(function(){
+								$.getJSON('js/certificados.json', function(data){
+									var qtd = data.Certificados.length;
+									var retorno = "";
+									for(i = 0; i< qtd; i++){
+										retorno += "<li class='card'><h3>" + data.Certificados[i].Title + "</h3>";
+										retorno += "<img src = '" + data.Certificados[i].link + "' />";
+										retorno += "<p>" + data.Certificados[i].Description + "</p></li>";
+									}
+									$(".certif-list").html(retorno);
+								});
+							});
+							</script>			
+							</ul>
+						</article>
+                    </section>
+                </div>
+            </div>
+            <footer id="rodape" class="fundo2">
+                <div class="container">
+                    <p>Site desenvolvido por Cadnuns Dimir | Facebook | Email</p>
+                    <a href="EmailTemplate.html">Email Template</a>
+                    <a href="contact.html">Entre em Contato com a <b>Nossa Equipe</b>!!!</a>
+                </div>                
+            </footer>
+
+
+        </div>
+    </body>
+</html>
