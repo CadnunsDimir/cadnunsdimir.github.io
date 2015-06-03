@@ -47,6 +47,11 @@ and open the template in the editor.
     #cabecalho {
         text-align:center;
     }
+    
+    .container-media {
+        margin-right:0px;
+        width:100%;
+    }
 
 }
 
@@ -81,7 +86,7 @@ and open the template in the editor.
     nav#menu .btn {
         position: fixed;
         right: -10px;  
-        top: 60px
+        top: 60px;
     }
     #cabecalho {
         text-align:center;
@@ -89,7 +94,11 @@ and open the template in the editor.
 
     nav#menu:hover ul {
         display:block;
-    } 
+    }
+    .container-media {
+        margin-right :0px;
+        width:100%;
+    }
 }
 
 @media screen and (min-width: 621px){
@@ -118,6 +127,12 @@ and open the template in the editor.
      #conteudo{
      	min-height:600px;
      }
+     
+     .container-media {
+        margin-right :100px;          
+        width: 350px;   
+    }
+   
 }
 
 
@@ -382,4 +397,24 @@ article#certificados{
 	background-color:#E5FF99;
 	padding:10px;
 	border-radius:7px;
+}
+.container-media {
+    border: 2px solid green;    
+    float: right;   
+}
+#list-media {  
+    list-style :none;
+    overflow:auto; 
+    height: 400px;
+    padding :0px;
+    padding-bottom: 10px;
+}
+#list-media li{    
+    border: 2px solid green;
+}
+.video-jw {
+    float:left;
+    width:100%;
+    max-width:800px;
+    max-height: 400px;
 }
