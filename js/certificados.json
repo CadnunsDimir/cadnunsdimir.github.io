@@ -2,17 +2,20 @@
 	"Certificados":[
 	{
 		"Title" : "Técnico Mecatrônico",
-		"link" : "img/congresso.jpg",
+        "link": "",
+        "img" : "",
 		"Description" : "ola mundo"
 	},
 	{
 		"Title" : "Programador FrontEnd",
-		"link" : "img/congresso.jpg",
+        "link": "img/congresso.jpg",
+        "img" : "",
 		"Description" : "ola mundo"
 	},
 	{
 		"Title" : "Programador BackEnd",
-		"link" : "img/congresso.jpg",
+        "link": "img/congresso.jpg",
+        "img" : "",
 		"Description" : "ola mundo"
 	}
 	]
