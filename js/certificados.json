@@ -3,20 +3,20 @@
 	{
 		"Title" : "Técnico Mecatrônico",
         "link": "",
-        "img" : "",
-		"Description" : "ola mundo"
+        "img" : "img/etec_martin_luther_king.png",
+		"Description" : "Curso Técnico feito entre os anos de 2010 e 2012(2 anos de duração), onde conheci diversas noções de controle e automação industrial, conhecimentos em robótica e as primeiras noções na área de rogramação..."
 	},
 	{
-		"Title" : "Programador FrontEnd",
+		"Title" : "HTML, CSS e JavaScript para Apps Windows 8",
         "link": "img/congresso.jpg",
-        "img" : "",
-		"Description" : "ola mundo"
+        "img" : "img/MVA-share-logo.png",
+		"Description" : "Curso Ministrado Pela Microsoft Virtual Academy, que ensina o desenvolvimento de aplicações desktop utilizando as liguagens Web citadas..."
 	},
 	{
-		"Title" : "Programador BackEnd",
-        "link": "img/congresso.jpg",
-        "img" : "",
-		"Description" : "ola mundo"
+		"Title" : "Programação em C# com Clean Code",
+        "link": "",
+        "img" : "img/MVA-share-logo.png",
+		"Description" : "Curso Ministrado Pela Microsoft Virtual Academy, com o objeto de ensinar técnica de código limpo, facilitando o desenvolvimento e manutenção de código, ou ainda o reaproveitamento do código utilizando os conceitos Herança e Instâncias..."
 	}
 	]
 }
