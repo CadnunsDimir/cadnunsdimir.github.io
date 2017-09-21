@@ -18,6 +18,17 @@
             span.innerText = event.key;
             document.body.appendChild(span);
         }
+        
+        document.getElementById("idComprovante").addEventListener("keydown", function(event){
+            if (event.keyCode == 9) {
+                console.log('you got tab i.e "NEXT" Btn');
+                document.getElementById("numeroDigitar").focus();
+           }
+           if (event.keyCode == 13) {
+               console.log('you got enter i.e "GO" Btn');
+               document.getElementById("idComprovante").blur();
+           }
+        });
     </script>
 </body>
 </html>
