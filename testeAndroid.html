@@ -23,6 +23,7 @@
         <input type="date" name="dataNascimento" id="dataNascimento">
         
         <input type="date" name="dataContratar" id="dataContratar">
+        <p><p>
     </form>
     
     <script>
@@ -59,8 +60,11 @@
             });
 
             input.addEventListener("keypress", function (ev){
+                
                 var theEvent = ev || window.event;
                 var key = theEvent.keyCode || theEvent.which;
+
+                log(key);
 
                 if(ev.charCode == 8 && ev.charCode == 46 && ev.keyCode == 8 && ev.keyCode == 46){
                     return;
@@ -82,7 +86,13 @@
             });            
         }
 
+        function log(text) {
+            var texto = document.getElementsByTagName("p")[0];
+            texto.innerText += (text+"_");
+        }
+
         maskData("dataContratar");
+
     </script>
 </body>
 </html>
