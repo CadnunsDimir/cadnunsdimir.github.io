@@ -55,6 +55,40 @@
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
     </form>
     
     <script>
@@ -116,6 +150,25 @@
             texto.innerText += (text+"_");
         }
 
+        function scrollTopElements(id) {
+            var findPos = function (obj) {
+                var curtop = 0;
+                if (obj.offsetParent) {
+                    do {
+                        curtop += obj.offsetTop;
+                    } while (obj = obj.offsetParent);
+                    return [curtop];
+                }
+            }
+
+            var el = document.getElementById(id);            
+            scroll(0, findPos(el)-15);
+        }
+
+        document.getElementById("dataContratar").onfocus = function () {
+            scrollTopElements("dataContratar");
+        }
+        
         maskData("dataContratar");
 
     </script>
