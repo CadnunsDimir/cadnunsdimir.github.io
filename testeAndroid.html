@@ -48,8 +48,9 @@
             input.setAttribute("type", "text");
             input.setAttribute("inputmode", "numeric");
             input.setAttribute("pattern", "[0-9]*");
+            input.setAttribute("maxlength", "10");
             input.setAttribute("aria-label", "digite a data no seguinte formato DDMMYYYY");
-            input.addEventListener("keyup", function (ev){
+            input.addEventListener("keydown", function (ev){
                 if (ev.charCode != 8 && ev.charCode != 46 && ev.keyCode != 8 && ev.keyCode != 46) {
                     if (ev.target.value.length == 2 || ev.target.value.length == 5) {
                         ev.target.value += "/";
@@ -58,9 +59,9 @@
             });
 
             input.addEventListener("keypress", function (ev){
-                var theEvent = evt || window.event;
+                var theEvent = ev || window.event;
                 var key = theEvent.keyCode || theEvent.which;
-                
+
                 if(ev.charCode == 8 && ev.charCode == 46 && ev.keyCode == 8 && ev.keyCode == 46){
                     return;
                 }
@@ -70,9 +71,14 @@
                 if( !regex.test(key) ) {
                     theEvent.returnValue = false;
                     if(theEvent.preventDefault) theEvent.preventDefault();
+                    if (ev.charCode == 13 || ev.keyCode == 13) {
+                        ev.target.blur();
+                        if (ev.target.value.length < 10) {
+                            ev.target.value =  "";
+                        }
+                    }
                 }
-            });
-            
+            });            
         }
 
         maskData("dataContratar");
