@@ -69,7 +69,7 @@
                 key = String.fromCharCode( key );
                 var regex = /[0-9]|\./;
                 
-                if( !regex.test(key) || evt.which < 48 || evt.which > 57 ) {
+                if( !regex.test(key) || ev.which < 48 || ev.which > 57 ) {
                     theEvent.returnValue = false;
                     if(theEvent.preventDefault) theEvent.preventDefault();
                     if (ev.charCode == 13 || ev.keyCode == 13) {
