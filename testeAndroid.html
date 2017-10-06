@@ -11,6 +11,8 @@
         <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
         <input type="number" name="idComprovante" id="idComprovante">
         <input type="date" name="dataNascimento" id="dataNascimento">
+        
+        <input type="date" name="dataContratar" id="dataContratar">
     </form>
     
     <script>
@@ -30,6 +32,22 @@
                document.getElementById("idComprovante").blur();
            }
         });
+        
+        function maskData(id){
+            var input = document.getElementById(id);
+            input.setAttribute("type", "text");
+            input.setAttribute("inputmode", "number");
+            input.setAttribute("aria-label", "digite a data no seguinte formato DDMMYYYY");
+            input.addEventListener("keyup", function (event){
+                if (ev.charCode != 8 && ev.charCode != 46 && ev.keyCode != 8 && ev.keyCode != 46) {
+                    if (ev.target.value.length == 2 || ev.target.value.length == 5) {
+                        ev.target.value += "/";
+                    }
+                }
+            });
+        }
+
+        maskData("dataContratar");
     </script>
 </body>
 </html>
