@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #dataContratar{            
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 18px;
+            width: 95%;
+            margin: 2.5%;
+        }
+    </style>
 </head>
 <body>
     <form method="GET">
@@ -37,6 +47,7 @@
             var input = document.getElementById(id);
             input.setAttribute("type", "text");
             input.setAttribute("inputmode", "numeric");
+            input.setAttribute("pattern", "[0-9]*");
             input.setAttribute("aria-label", "digite a data no seguinte formato DDMMYYYY");
             input.addEventListener("keyup", function (ev){
                 if (ev.charCode != 8 && ev.charCode != 46 && ev.keyCode != 8 && ev.keyCode != 46) {
