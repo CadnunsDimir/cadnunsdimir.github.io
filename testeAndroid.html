@@ -36,7 +36,7 @@
         function maskData(id){
             var input = document.getElementById(id);
             input.setAttribute("type", "text");
-            input.setAttribute("inputmode", "number");
+            input.setAttribute("inputmode", "numeric");
             input.setAttribute("aria-label", "digite a data no seguinte formato DDMMYYYY");
             input.addEventListener("keyup", function (ev){
                 if (ev.charCode != 8 && ev.charCode != 46 && ev.keyCode != 8 && ev.keyCode != 46) {
