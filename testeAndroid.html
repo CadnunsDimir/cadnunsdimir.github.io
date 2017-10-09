@@ -21,6 +21,7 @@
         <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
         <input type="number" name="idComprovante" id="idComprovante">
         <input type="date" name="dataNascimento" id="dataNascimento">
+        <input type="text" name="senha" id="senha">
         
         <!-- <input type="date" name="dataContratar" id="dataContratar"> -->
         <p></p>
@@ -108,7 +109,11 @@
                document.getElementById("idComprovante").blur();
            }
         });
-        
+        function maskPW(id){
+             var input = document.getElementById(id);
+            input.setAttribute("type", "password");
+            input.setAttribute("inputmode", "numeric");            
+        }
         function maskData(id){
             var input = document.getElementById(id);
             input.setAttribute("type", "tel");
@@ -170,7 +175,7 @@
         }
         
         maskData("dataContratar");
-
+        maskPW("senha");
     </script>
 </body>
 </html>
