@@ -21,8 +21,9 @@
         <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
         <input type="number" name="idComprovante" id="idComprovante">
         <input type="date" name="dataNascimento" id="dataNascimento">
-        <input type="text" name="senha" id="senha" placeholder="digite sua senha">
-        <input type="password" pattern="[0-9]*" placeholder="http://www.creativebloq.com/html5/12-html5-tricks-mobile-81412803" inputmode="numeric" />
+        <input type="password" inputmode="numeric" name="senha" id="senha" placeholder="digite sua senha"  pattern="\-?\d+(\.\d{0,})?">
+        
+
         
         <p></p>
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
@@ -112,10 +113,20 @@
         });
         function maskPW(id){
              var input = document.getElementById(id);
-            input.setAttribute("type", "tel");
-            input.setAttribute("inputmode", "numeric");
-            input.setAttribute("pattern", "[0-9]*");
-            input.style["-webkit-text-security"] = "disc";
+            // input.setAttribute("type", "tel");
+            // input.setAttribute("inputmode", "numeric");
+            // input.setAttribute("pattern", "[0-9]*");
+            // input.style["-webkit-text-security"] = "disc";
+            // input.setAttribute("type", "password");
+            // input.setAttribute("pattern", "[0-9]*");
+            // input.setAttribute("inputmode", "numeric");
+            // input.style.pattern =  "\d*";
+            input.addEventListener("keypress", function (ev) {
+                ev.target.setAttribute("type", "password");
+                setTimeout(function (params) {
+                    ev.target.setAttribute("type", "number");
+                },20);
+            })
         }
         function maskData(id){
             var input = document.getElementById(id);
