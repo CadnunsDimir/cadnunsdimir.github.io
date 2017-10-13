@@ -38,7 +38,7 @@
                     if(keyPad.indexOf(ev.key) >=0 && !(otherKeyCodes.indexOf(ev.keyCode)>= 0)){
                         ev.preventDefault();
                         if(keyPad.indexOf(ev.key) >=0){
-                            input.value += "*";
+                            input.value += "&#9679";
                             input.typedPassWord = ((input.typedPassWord || "" )+ev.key);
                             console.log(input.typedPassWord);
                         }
