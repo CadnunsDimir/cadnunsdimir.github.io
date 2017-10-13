@@ -18,7 +18,53 @@
 </head>
 <body>
     <form method="GET">
-        <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
+
+        <label for="inputSenha">Digite a senha abaixo</label>
+        <input type="text" id="inputSenha" >
+        <script>
+            function InputPassWordNumKeyPad(id) {
+                var input = document.getElementById(id);
+                var formList = document.getElementsByTagName("form");
+
+                for(var i =0 ; formList.length > i;i++){
+                    var form = formList.item(i);
+                    form.setAttribute("autocomplete", "off");
+                }
+
+                input.setAttribute("type", "password");
+                input.addEventListener("keydown", function (ev) {
+                    var keyPad = ["0", "1","2","3", "4", "5", "6", "7", "8", "9"];
+                    var otherKeyCodes = [13,9,8];
+                    if(keyPad.indexOf(ev.key) >=0 && !(otherKeyCodes.indexOf(ev.keyCode)>= 0)){
+                        ev.preventDefault();
+                        if(keyPad.indexOf(ev.key) >=0){
+                            input.value += "*";
+                            input.typedPassWord = ((input.typedPassWord || "" )+ev.key);
+                            console.log(input.typedPassWord);
+                        }
+                    }else if(otherKeyCodes.indexOf(ev.keyCode)>= 0){
+                        //verificar se realmente precisa disso kkk
+                        if(ev.keyCode == 8){  
+                            var len = input.value.length;                          
+                            input.value = input.value.substring(0, len);
+                            input.typedPassWord = input.typedPassWord.substring(0, len-1);
+                        }
+                    }else{
+                        ev.preventDefault();
+                    }           
+                });
+                input.addEventListener("focus",function (ev) {
+                    input.setAttribute("type", "tel");
+                });
+                input.addEventListener("blur",function (ev) {
+                    input.setAttribute("type", "password");
+                });
+                this.htmlElement = input;
+            }
+
+            var passwordInput = new InputPassWordNumKeyPad("inputSenha");
+        </script>
+        <!-- <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
         <input type="number" name="idComprovante" id="idComprovante">
         <input type="date" name="dataNascimento" id="dataNascimento">
         <input type="password" inputmode="numeric" name="senha" id="senha" placeholder="digite sua senha"  pattern="\-?\d+(\.\d{0,})?">
@@ -90,7 +136,7 @@
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
                 <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
+                <p>ashaksjhaksjdhaksdhaksjhdakjs</p> -->
     </form>
     
     <script>
