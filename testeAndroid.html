@@ -18,8 +18,61 @@
 </head>
 <body>
     <form method="GET">
-        <input type="password" id="inputSenhaNormal" pattern="[0-9]*" style="pattern:'[0-9]*';">
-        <label for="inputSenha">Digite a senha abaixo</label>
+
+        <input type="text" id="mensagem">
+
+        <button id="btn" type="button">mostrar tooltip</button>
+
+        <script>
+            function TooltipController() {
+                var tooltip = document.getElementById("tooltip");
+                if(!tooltip){
+                    var tooltip = document.createElement("div");
+                    tooltip.text = document.createElement("p");
+                    tooltip.appendChild(tooltip.text);      
+                    document.body.appendChild(tooltip);
+                    tooltip.id = "tooltip";
+                    tooltip.style.position = "fixed";
+                    tooltip.style.display = "none";
+                    tooltip.style.top = "0";
+                    tooltip.style.left = "0";
+                    tooltip.style.width = "100%";
+                    // tooltip.style.padding = "25px";
+                    tooltip.style.backgroundColor = "red";
+                    tooltip.style.color = "white";
+                    tooltip.text.tabIndex = -1;
+                    tooltip.show = function () {
+                        tooltip.style.display = "block";
+                        tooltip.text.focus();
+                    }
+                    tooltip.hide = function () {
+                        tooltip.style.display = "none";
+                        tooltip.text.blur();
+                    }
+
+                    tooltip.addEventListener("click", function () {
+                        tooltip.hide();
+                    });
+                }
+                
+
+                return {
+                    show : function (msg) {
+                        tooltip.text.innerText = msg || "sua mensagem está errada";
+                        tooltip.show();
+                    },
+                    hide : tooltip.hide
+                }
+            }
+
+            var tooltipObj = TooltipController();
+
+            document.getElementById("btn").addEventListener("click", function (event) {
+               tooltipObj.show();
+            });
+        </script>
+
+        <!-- <label for="inputSenha">Digite a senha abaixo</label>
         <input type="text" id="inputSenha" >
         <script>
             function InputPassWordNumKeyPad(id) {
@@ -38,7 +91,7 @@
                     if(keyPad.indexOf(ev.key) >=0 && !(otherKeyCodes.indexOf(ev.keyCode)>= 0)){
                         ev.preventDefault();
                         if(keyPad.indexOf(ev.key) >=0){
-                            input.value += "&#9679";
+                            input.value += "*";
                             input.typedPassWord = ((input.typedPassWord || "" )+ev.key);
                             console.log(input.typedPassWord);
                         }
@@ -63,7 +116,7 @@
             }
 
             var passwordInput = new InputPassWordNumKeyPad("inputSenha");
-        </script>
+        </script> -->
         <!-- <input type="number" name="numeroDigitar" id="numeroDigitar" onkeydown="testarDigito(event)">
         <input type="number" name="idComprovante" id="idComprovante">
         <input type="date" name="dataNascimento" id="dataNascimento">
