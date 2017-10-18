@@ -22,6 +22,7 @@
         <input type="text" id="mensagem">
 
         <button id="btn" type="button">mostrar tooltip</button>
+        <button id="btn2" type="button">mostrar tooltip</button>
 
         <script>
             function TooltipController() {
@@ -52,14 +53,17 @@
 
                     tooltip.addEventListener("click", function () {
                         tooltip.hide();
+                        if(tooltip.idElementToReturn)
+                            document.getElementById(tooltip.idElementToReturn).focus();
                     });
                 }
                 
 
                 return {
-                    show : function (msg) {
+                    show : function (msg, idElement) {
                         tooltip.text.innerText = msg || "sua mensagem está errada";
                         tooltip.show();
+                        tooltip.idElementToReturn = idElement;
                     },
                     hide : tooltip.hide
                 }
@@ -68,7 +72,59 @@
             var tooltipObj = TooltipController();
 
             document.getElementById("btn").addEventListener("click", function (event) {
-               tooltipObj.show();
+               tooltipObj.show("mostrando a tooltip","mensagem");
+            });
+
+
+
+
+
+            function TooltipController2() {
+                var tooltip = document.getElementById("tooltip2");
+                if(!tooltip){
+                    var tooltip = document.createElement("div");
+                    document.body.appendChild(tooltip);
+                    tooltip.id = "tooltip";
+                    tooltip.style.position = "fixed";
+                    tooltip.style.display = "none";
+                    tooltip.style.top = "0";
+                    tooltip.style.left = "0";
+                    tooltip.style.width = "100%";
+                    tooltip.style.padding = "16px";
+                    tooltip.style.backgroundColor = "red";
+                    tooltip.style.color = "white";
+                    tooltip.tabIndex = -1;
+                    tooltip.show = function () {
+                        tooltip.style.display = "block";
+                        tooltip.focus();
+                    }
+                    tooltip.hide = function () {
+                        tooltip.style.display = "none";
+                        tooltip.blur();
+                    }
+
+                    tooltip.addEventListener("click", function () {
+                        tooltip.hide();
+                        if(tooltip.idElementToReturn)
+                            document.getElementById(tooltip.idElementToReturn).focus();
+                    });
+                }
+                
+
+                return {
+                    show : function (msg, idElement) {
+                        tooltip.innerText = msg || "sua mensagem está errada";
+                        tooltip.show();
+                        tooltip.idElementToReturn = idElement;
+                    },
+                    hide : tooltip.hide
+                }
+            }
+
+            var tooltipObj2 = TooltipController2();
+
+            document.getElementById("btn2").addEventListener("click", function (event) {
+                tooltipObj2.show("mostrando a tooltip 2","mensagem");
             });
         </script>
 
