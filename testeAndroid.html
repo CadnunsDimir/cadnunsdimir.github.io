@@ -33,6 +33,7 @@
                     tooltip.appendChild(tooltip.text);      
                     document.body.appendChild(tooltip);
                     tooltip.id = "tooltip";
+                    tooltip.setAttribute("role", "tooltip");
                     tooltip.style.position = "fixed";
                     tooltip.style.display = "none";
                     tooltip.style.top = "0";
@@ -85,6 +86,7 @@
                     var tooltip = document.createElement("div");
                     document.body.appendChild(tooltip);
                     tooltip.id = "tooltip";
+                    tooltip.setAttribute("role", "tooltip");
                     tooltip.style.position = "fixed";
                     tooltip.style.display = "none";
                     tooltip.style.top = "0";
