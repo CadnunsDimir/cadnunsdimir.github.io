@@ -418,6 +418,10 @@ article#certificados{
     max-width:800px;
     max-height: 400px;
 }
+.qr-code img{
+    3max-width : 300px;
+}
 .qr-code{
-    max-width : 200px;
+    padding: 10px;
+    background-color: #ccc;
 }
