@@ -419,7 +419,7 @@ article#certificados{
     max-height: 400px;
 }
 .qr-code img{
-    3max-width : 300px;
+    max-width : 300px;
 }
 .qr-code{
     padding: 10px;
