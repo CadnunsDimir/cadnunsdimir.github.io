@@ -17,14 +17,36 @@
     </style>
 </head>
 <body>
-    <form method="GET">
 
-        <input type="text" id="mensagem">
 
-        <button id="btn" type="button">mostrar tooltip</button>
-        <button id="btn2" type="button">mostrar tooltip</button>
+
+
+
+    <form method="GET" onsubmit="return false;">
+
+
+        <input type="tel" id="inputNumerico"/>
+
+        <p></p>
 
         <script>
+        var input = document.getElementById("inputNumerico");
+        var paragraph = document.querySelector("p");
+        input.addEventListener("keydown", function (ev) {
+            paragraph.innerHTML += ev.key;
+
+        });
+
+        
+        </script>
+
+
+        <!-- <input type="text" id="mensagem">
+
+        <button id="btn" type="button">mostrar tooltip</button>
+        <button id="btn2" type="button">mostrar tooltip</button> -->
+
+        <!-- <script>
             function TooltipController() {
                 var tooltip = document.getElementById("tooltip");
                 if(!tooltip){
@@ -128,7 +150,7 @@
             document.getElementById("btn2").addEventListener("click", function (event) {
                 tooltipObj2.show("mostrando a tooltip 2","mensagem");
             });
-        </script>
+        </script> -->
 
         <!-- <label for="inputSenha">Digite a senha abaixo</label>
         <input type="text" id="inputSenha" >
@@ -182,74 +204,10 @@
         
 
         
-        <p></p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-
-                <input type="date" name="dataContratar" id="dataContratar">
-
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p>
-                <p>ashaksjhaksjdhaksdhaksjhdakjs</p> -->
+        -->
     </form>
-    
+
+    <!--
     <script>
         function testarDigito(event){
             var span = document.createElement("span");
@@ -347,6 +305,6 @@
         
         maskData("dataContratar");
         maskPW("senha");
-    </script>
+    </script> -->
 </body>
 </html>
